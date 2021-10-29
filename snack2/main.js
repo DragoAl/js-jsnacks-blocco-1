@@ -14,7 +14,7 @@ console.log(firstWord.length);
 let secondWord = prompt("Inserisci la seconda parola");
 console.log(secondWord.length);
 
-// 2. CONFRONTO LE DUE PAROLE INSERITE E STAMPO SE TROVO LA PIù LUNGA
+// 2. CONFRONTO LE DUE PAROLE INSERITE E STAMPO PRIMA LA PAROLA PIU' CORTA E POI LA PIU' LUNGA
 if(firstWord.length> secondWord.length){
     minWord.innerHTML = `la parola più corta è :${secondWord} `;
     maxWord.innerHTML = `la parola più lunga è :${firstWord} `;
@@ -24,22 +24,7 @@ if(firstWord.length> secondWord.length){
     maxWord.innerHTML = `la parola più lunga è :${secondWord} `;
     console.log("La parola più lunga è : ",secondWord);
 }else{
-    // NEL CASO IN CUI LE LUNGHEZZE SIANO UGUALI DEVO ITERARE I PROMPT FINO A QUANDO L'UTENTE NON INSERISCE DUE PAROLE DI LUNGHEZZA DIVERSA
-    console.log(firstWord.length === secondWord.length);
-    let words =firstWord.length === secondWord.length;
-    while (words = true){
-        let firstIterN = prompt("Inserisci la prima parola");
-        let secondIterN = prompt("Inserisci la seconda parola DIVERSA");
-        console.log(firstIterN === secondIterN);
-        
-        
-    };
-
-    if(firstIterN.length > secondIterN.length){
-        minWord.innerHTML = `la parola più corta è :${secondIterN} `;
-        maxWord.innerHTML = `la parola più lunga è :${firstIterN} `;
-    } else{
-        minWord.innerHTML = `la parola più corta è :${firstIterN} `;
-        maxWord.innerHTML = `la parola più lunga è :${secondIterN} `;
-    }
+    minWord.innerHTML = `le parole sono lunghe uguali :${firstWord} `;
+    maxWord.innerHTML = `le parole sono lunghe uguali :${secondWord} `;
+ 
 };

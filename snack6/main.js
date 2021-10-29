@@ -3,15 +3,25 @@
 const randNumbers= [];
 
 // FACCIO UN CICLO PER POPOLARE L'ARRAY FINO A 50 ELEMENTI
-
-while ( randNumbers.length < 50){
+while (randNumbers.length < 50){
     let number = Math.floor(Math.random() * 100) + 1;
-    // CONDIZIONE PER PRENDERE SOLO 
-    if (number != ) {
+    let found = false;
+
+    // CONTROLLO CHE NON CI SIANO DOPPIONI
+    for ( let i = 0; i < randNumbers.length; i++){
+        if ( number === randNumbers[i] ) {
+            found = true
+        }
+    }
+    
+    if (found == false) {
         randNumbers.push(number);
     }
 }
+    
+
 console.log(randNumbers);
+
   
 
 

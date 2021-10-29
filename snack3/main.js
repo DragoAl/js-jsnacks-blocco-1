@@ -6,18 +6,15 @@ const sommaCont = document.getElementById("somma");
 let numArr = [];
 let somma = 0;
 
-// CHIEDO 10 VOLTE ALL'UTENTE DI INSERIRE UN NUMERO E LO INSERISCO IN UN ARRAY VUOTO
+// CHIEDO 10 VOLTE ALL'UTENTE DI INSERIRE UN NUMERO E LO INSERISCO IN UN ARRAY VUOTO E LI SOMMO
 for( let i = 0; i < 10; i++){
     let numAdded = parseInt(prompt("Inserisci un numero"));
     console.log(numAdded);
     numArr.push(numAdded);
+    somma += numArr[i];
+    // somma += numAdded; NON DOVENDO TENERE I NUMERI IN MEMORIA NON MI SERVE CHE I NUMERI VENGANO SALVATI IN UN ARRAY
 }
 console.log(numArr);
-
-// SOMMO GLI ELEMENTI ALL'INTERNO DELL'ARRAY
-for( let i = 0; i < numArr.length; i++){
-    somma += numArr[i];
-}
 console.log(somma);
 
 // STAMPO IL RISULTATO
